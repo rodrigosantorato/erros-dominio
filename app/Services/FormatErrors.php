@@ -46,7 +46,7 @@ class FormatErrors
         if($isEmpty == true){
             return 'Não achei nenhum erro nesses arquivos';
         }
-        return true;
+        return $this->formattedErrors;
     }
     public function getEmployeeCodes()
     {

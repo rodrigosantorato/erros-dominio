@@ -32,7 +32,7 @@ abstract class HandleErrors
                     }
                 }
                 if($hasError == false){
-                    if($errorMessage = 'Registro duplicado'){
+                    if(strstr($errorMessage, 'Registro duplicado')){
                         $echo[] = '*Registro duplicado.';
                     }else{
                         $echo[] = '*Confirmar com a contabilidade se a rúbrica acima é de um benefício de saúde ou odonto.';

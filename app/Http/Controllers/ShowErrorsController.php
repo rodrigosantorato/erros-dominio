@@ -31,9 +31,10 @@ class ShowErrorsController extends Controller
         $manageFiles->read();
 
         $formatErrors = new FormatErrors($manageFiles);
-        $formatErrors->findAndFormat();
-        $formatErrors->getEmployeeCodes();
-        $lines[] =  $formatErrors->replaceCodeWithName();
+//        $formatErrors->findAndFormat();
+//        $formatErrors->getEmployeeCodes();
+//        $lines[] =  $formatErrors->replaceCodeWithName();
+          $lines[] = $formatErrors->findAndFormat();
 
         return view ('showErrors',  ['lines' => current($lines)]);
     }
