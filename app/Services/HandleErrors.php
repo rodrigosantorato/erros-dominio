@@ -11,8 +11,8 @@ abstract class HandleErrors
         $hasError = false;
         $echo = [];
         if(strlen($txtLines[$key-1]) == 44){
-            $echo[] = 'Linha '. $lineNumber. utf8_encode($errorMessage);
-            $echo[] = 'Código do empregado: ' . substr($txtLines[$key-1], 2, 10);
+            $echo[] = 'Linha '. $lineNumber. $errorMessage;
+            $echo[] = 'Código do empregado: ' . ltrim(substr($txtLines[$key-1], 2, 10), 0);
             $echo[] = 'Código da Rúbrica: ' . substr($txtLines[$key-1], 18, 4);
             $echo[] = 'Valor: R$ ' . ltrim(substr($txtLines[$key-1], 24, 7), '0'). ','. substr($txtLines[$key-1], 31, 2);
 
